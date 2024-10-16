@@ -16,6 +16,14 @@ const FavouriteBtn = (movie) => {
   const toggleButton = (e) => {
     e.stopPropagation();
     dispatch(toggleFavourite(movieData));
+
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "favourite_movie",
+      movie_id: movieData.id,
+      movie_title: movieData.title,
+      favourite_status: !isFavourite ? "added" : "removed",
+    });
   };
 
   return (
