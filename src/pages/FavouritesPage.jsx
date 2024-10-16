@@ -16,8 +16,12 @@ const FavouritesPage = () => {
       <h1>YOUR FAVOURITES HERE</h1>
       <ul>
         <PosterContainer>
-          {favourites.map((movie) => (
-            <li key={movie.id}>
+          {favourites.map((movie, index) => (
+            <li
+              key={movie.id}
+              className="animate-fade-up"
+              style={{ animationDelay: `${index * 200}ms`, opacity: 0 }}
+            >
               <PosterCard
                 imgSrc={movie.poster_path}
                 title={movie.title}

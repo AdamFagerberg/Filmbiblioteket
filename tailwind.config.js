@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       animation: {
-        "fade-up": "fade-up 0.8s ease forwards",
+        "fade-up": "fade-up 1s ease forwards",
       },
       keyframes: {
         "fade-up": {
