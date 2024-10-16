@@ -14,6 +14,7 @@ const HomePageMeta = () => (
     <meta property="og:title" content="Filmbiblioteket" />
     <meta property="og:description" content="Look up and favourite movies" />
     <meta property="og:url" content={window.location.href} />
+    <meta property="og:type" content="website" />
   </Helmet>
 );
 

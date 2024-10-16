@@ -1,15 +1,20 @@
 import { useSelector } from "react-redux";
 import PosterCard from "../components/PosterCard";
 import PosterContainer from "../components/ui/PosterContainer";
+import SearchPageMeta from "../meta/SearchPageMeta";
+import { useParams } from "react-router-dom";
 
 const SearchPage = () => {
   const { movies, status } = useSelector((state) => state.search);
+  const params = useParams();
+  const query = params.query;
 
   if (status === "loading" || status === "initial" || status === "failed")
     return <div>Loading...</div>;
 
   return (
     <div>
+      <SearchPageMeta query={query} />
       <h1>SEARCH PAGE</h1>
       <ul>
         <PosterContainer>
