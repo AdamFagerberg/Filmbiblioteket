@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import PosterCard from "../components/PosterCard";
 import PosterContainer from "../components/ui/PosterContainer";
+import HomePageMeta from "../meta/HomePageMeta";
 
 const HomePage = () => {
   const { movies, status } = useSelector((state) => state.movies);
@@ -10,6 +11,7 @@ const HomePage = () => {
 
   return (
     <div className="h-screen">
+      <HomePageMeta />
       <h1>TRENDING</h1>
       <ul>
         <PosterContainer>
