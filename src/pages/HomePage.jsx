@@ -15,8 +15,12 @@ const HomePage = () => {
       <h1>TRENDING</h1>
       <ul>
         <PosterContainer>
-          {movies.results.map((movie) => (
-            <li key={movie.id} className="animate-fade-up">
+          {movies.results.map((movie, index) => (
+            <li
+              key={movie.id}
+              className="animate-fade-up"
+              style={{ animationDelay: `${index * 200}ms`, opacity: 0 }}
+            >
               <PosterCard
                 imgSrc={movie.poster_path}
                 title={movie.title}
