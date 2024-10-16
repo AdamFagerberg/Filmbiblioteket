@@ -3,7 +3,7 @@ import Searchbar from "./Searchbar";
 
 const Navbar = () => {
   return (
-    <div className="justify-between flex">
+    <div className="flex gap-10 justify-center p-10">
       <Link to="/">HOME</Link>
       <Searchbar />
       <Link to="/favourites">FAVOURITES</Link>
