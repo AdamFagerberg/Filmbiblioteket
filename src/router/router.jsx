@@ -26,7 +26,7 @@ export const router = createBrowserRouter([
         element: <FavouritesPage />,
       },
       {
-        path: "search",
+        path: "search/:query",
         element: <SearchPage />,
       },
     ],

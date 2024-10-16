@@ -11,7 +11,7 @@ const Searchbar = () => {
 
   useEffect(() => {
     if (query && /\S/.test(query)) {
-      navigate("/search");
+      navigate(`/search/${query}`);
     } else {
       navigate("/");
     }

@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import PosterCard from "../components/PosterCard";
 import PosterContainer from "../components/ui/PosterContainer";
+import FavouritesPageMeta from "../meta/FavouritesPageMeta";
 
 const FavouritesPage = () => {
   const favourites = useSelector((state) => state.favourites || []);
@@ -11,6 +12,7 @@ const FavouritesPage = () => {
 
   return (
     <div>
+      <FavouritesPageMeta />
       <h1>YOUR FAVOURITES HERE</h1>
       <ul>
         <PosterContainer>
