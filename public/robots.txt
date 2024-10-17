@@ -1,0 +1,9 @@
+
+  User-agent: *
+  Disallow: /search
+  Disallow: /favourites
+  Disallow: /movie
+  Allow: /
+
+  Sitemap: https://filmbiblioteket.vercel.app/sitemap.xml
+  
