@@ -24,7 +24,7 @@ const Searchbar = () => {
 
   return (
     <input
-      className="text-black"
+      className="text-black rounded-md px-4 hover:bg-gray-200"
       placeholder="Search"
       type="text"
       onChange={(e) => handleSearch(e)}

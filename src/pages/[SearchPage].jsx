@@ -13,16 +13,16 @@ const SearchPage = () => {
     return <div>Loading...</div>;
 
   return (
-    <div>
+    <div className="h-screen">
       <SearchPageMeta query={query} />
-      <h1>SEARCH PAGE</h1>
+      <h1 className="font-semibold text-4xl p-4">SEARCH RESULTS</h1>
       <ul>
         <PosterContainer>
           {movies.results.map((movie, index) => (
             <li
               key={movie.id}
               className="animate-fade-up"
-              style={{ animationDelay: `${index * 200}ms`, opacity: 0 }}
+              style={{ animationDelay: `${index * 100}ms`, opacity: 0 }}
             >
               <PosterCard
                 imgSrc={movie.poster_path}

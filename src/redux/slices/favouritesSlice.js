@@ -27,7 +27,7 @@ const favouritesSlice = createSlice({
       if (isFavourite >= 0) {
         state.splice(isFavourite, 1);
       } else {
-        state.push(movie);
+        state.unshift(movie);
       }
 
       saveLocalFavourites(state);

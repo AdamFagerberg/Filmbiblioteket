@@ -2,9 +2,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleFavourite } from "../redux/slices/favouritesSlice";
 import HeartIcon from "../assets/heart.svg?react";
 
-const FavouriteBtn = (movie) => {
+const FavouriteBtn = ({ movie, size }) => {
   const dispatch = useDispatch();
-  const movieData = movie.movie;
+  const movieData = movie;
 
   const favourites = useSelector((state) => state.favourites);
 
@@ -26,13 +26,16 @@ const FavouriteBtn = (movie) => {
     });
   };
 
+  const sizeProps =
+    size === "lg" ? { width: 80, height: 80 } : { width: 32, height: 32 };
+
   return (
     <button onClick={(e) => toggleButton(e)}>
-      {isFavourite ? (
-        <HeartIcon width={32} height={32} fill="red" stroke="white" />
-      ) : (
-        <HeartIcon width={32} height={32} stroke="white" fill="transparent" />
-      )}
+      <HeartIcon
+        stroke="white"
+        fill={isFavourite ? "red" : "transparent"}
+        {...sizeProps}
+      />
     </button>
   );
 };

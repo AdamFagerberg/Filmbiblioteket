@@ -11,16 +11,16 @@ const FavouritesPage = () => {
   }
 
   return (
-    <div>
+    <div className="h-screen">
       <FavouritesPageMeta />
-      <h1>YOUR FAVOURITES HERE</h1>
+      <h1 className="font-semibold text-4xl p-4">FAVOURITES</h1>
       <ul>
         <PosterContainer>
           {favourites.map((movie, index) => (
             <li
               key={movie.id}
               className="animate-fade-up"
-              style={{ animationDelay: `${index * 200}ms`, opacity: 0 }}
+              style={{ animationDelay: `${index * 100}ms`, opacity: 0 }}
             >
               <PosterCard
                 imgSrc={movie.poster_path}

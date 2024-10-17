@@ -1,4 +1,3 @@
-// src/meta/MovieDetailsMeta.jsx
 import { Helmet } from "react-helmet-async";
 
 const MovieDetailsMeta = ({ movie }) => {
