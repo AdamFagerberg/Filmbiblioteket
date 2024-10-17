@@ -112,9 +112,9 @@ Follow these instructions to set up the project locally.
 
 ## API Integration
 
-This project uses **OMDb API** to fetch movie data.
+This project uses **TMDB API** to fetch movie data.
 
-- **API Key:** Register at [OMDb](https://developer.themoviedb.org/docs/getting-started) for a free API key.
+- **API Key:** Register at [TMDB](https://developer.themoviedb.org/docs/getting-started) for a free API key.
 
 - **Endpoints:**
 
