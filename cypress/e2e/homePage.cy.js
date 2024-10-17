@@ -1,6 +1,6 @@
 describe("HomePage", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:5173");
+    cy.visit("https://filmbiblioteket.vercel.app");
   });
 
   it("should display loading", () => {

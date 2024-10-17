@@ -3,7 +3,7 @@ import { createWriteStream } from "fs";
 import { SitemapStream } from "sitemap";
 
 async function generateSitemap() {
-  const hostname = "http://localhost:5173";
+  const hostname = "https://filmbiblioteket.vercel.app";
 
   const writeStream = createWriteStream(path.resolve("public", "sitemap.xml"));
   const sitemap = new SitemapStream({ hostname });

@@ -1,6 +1,6 @@
 describe("Searchbar Component", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:5173");
+    cy.visit("https://filmbiblioteket.vercel.app");
   });
 
   it("should render the search input", () => {

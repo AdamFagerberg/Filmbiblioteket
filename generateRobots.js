@@ -9,7 +9,7 @@ async function generateRobotsTxt() {
   Disallow: /movie
   Allow: /
 
-  Sitemap: http://localhost:5173/sitemap.xml
+  Sitemap: https://filmbiblioteket.vercel.app/sitemap.xml
   `;
 
   const filePath = path.resolve("public", "robots.txt");
