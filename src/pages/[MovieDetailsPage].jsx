@@ -25,7 +25,7 @@ const MovieDetailsPage = () => {
   if (!movie) return <div>Movie not found</div>;
 
   return (
-    <div className="flex flex-col h-screen overflow-scroll">
+    <div className="flex flex-col h-screen overflow-scroll no-scrollbar">
       <MovieDetailsMeta movie={movie} />
 
       <div
@@ -34,7 +34,7 @@ const MovieDetailsPage = () => {
           backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie.poster_path})`,
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-t from-black from-50% to-transparent rounded-md"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black from-50% to-transparent"></div>
 
         <div className="flex flex-col p-6 md:flex-row md:p-24 md:py-52 justify-center  gap-5">
           <div className="flex flex-col gap-5 animate-fade-up ">

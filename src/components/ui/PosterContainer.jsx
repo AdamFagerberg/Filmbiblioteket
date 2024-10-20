@@ -1,8 +1,6 @@
 const PosterContainer = ({ children }) => {
   return (
-    <div className="flex flexrow overflow-x-scroll no-scrollbar">
-      {children}
-    </div>
+    <ul className="flex flex-row overflow-x-auto no-scrollbar">{children}</ul>
   );
 };
 

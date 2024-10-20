@@ -14,26 +14,24 @@ const FavouritesPage = () => {
     <div className="h-screen">
       <FavouritesPageMeta />
       <h1 className="font-semibold text-4xl p-4">FAVOURITES</h1>
-      <ul>
-        <PosterContainer>
-          {favourites.map((movie, index) => (
-            <li
-              key={movie.id}
-              className="animate-fade-up"
-              style={{ animationDelay: `${index * 100}ms`, opacity: 0 }}
-            >
-              <PosterCard
-                imgSrc={movie.poster_path}
-                title={movie.title}
-                date={movie.release_date}
-                rating={movie.vote_average}
-                id={movie.id}
-                movie={movie}
-              />
-            </li>
-          ))}
-        </PosterContainer>
-      </ul>
+      <PosterContainer>
+        {favourites.map((movie, index) => (
+          <li
+            key={movie.id}
+            className="animate-fade-up"
+            style={{ animationDelay: `${index * 100}ms`, opacity: 0 }}
+          >
+            <PosterCard
+              imgSrc={movie.poster_path}
+              title={movie.title}
+              date={movie.release_date}
+              rating={movie.vote_average}
+              id={movie.id}
+              movie={movie}
+            />
+          </li>
+        ))}
+      </PosterContainer>
     </div>
   );
 };
